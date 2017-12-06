@@ -1,0 +1,377 @@
+<!--A Design by W3layouts 
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+<!-- Mirrored from p.w3layouts.com/demos/shopin/web/typo.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 27 Jul 2017 00:08:45 GMT -->
+<head>
+<title>Update movie</title>
+<link href="template/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<!-- Custom Theme files -->
+<!--theme-style-->
+<link href="template/css/style.css" rel="stylesheet" type="text/css" media="all" />
+<!--//theme-style-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Shopin Responsive web template, Bootstrap Web Templates, Flat Web Templates, AndroId Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!--theme-style-->
+<link href="template/css/style4.css" rel="stylesheet" type="text/css" media="all" />	
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<!--//theme-style-->
+<script src="template/js/jquery.min.js"></script>
+<!--- start-rate---->
+<script src="template/js/jstarbox.js"></script>
+
+	<link rel="stylesheet" href="template/css/jstarbox.css" type="text/css" media="screen" charset="utf-8" />
+	<script>
+	var myApp = angular.module('myApp',[]);
+	myApp.controller('contactController',function ($scope,$http) {
+
+     $http({
+        method : "GET",
+        url : "http://127.0.0.1:3000/listProduct",
+        dataType: 'json'
+    }).then(function mySuccess(response) {
+        $scope.products = response.data;
+
+        console.log($scope.products);
+    }, function myError(response) {
+        $scope.products = "";
+    });
+});
+</script>
+<script>
+function fun() {
+var my_url =window.location.href;
+alert(my_url);
+var url = new URL(my_url);
+var id_url = url.searchParams.get("id");
+alert(id_url);
+}
+</script>
+		<script type="text/javascript">
+			jQuery(function() {
+			jQuery('.starbox').each(function() {
+				var starbox = jQuery(this);
+					starbox.starbox({
+					average: starbox.attr('data-start-value'),
+					changeable: starbox.hasClass('unchangeable') ? false : starbox.hasClass('clickonce') ? 'once' : true,
+					ghosting: starbox.hasClass('ghosting'),
+					autoUpdateAverage: starbox.hasClass('autoupdate'),
+					buttons: starbox.hasClass('smooth') ? false : starbox.attr('data-button-count') || 5,
+					stars: starbox.attr('data-star-count') || 5
+					}).bind('starbox-value-changed', function(event, value) {
+					if(starbox.hasClass('random')) {
+					var val = Math.random();
+					starbox.next().text(' '+val);
+					return val;
+					} 
+				})
+			});
+		});
+		</script>
+<!---//End-rate---->
+
+
+<script> //Rami
+function hifunction() {
+var c =window.location.href;
+//alert(c);
+//http://localhost:3000/update_product?id=64&libelle=123&description=&quantite=70&prixAchatUnitaire=98754.3&prixVenteUnitaire=77777800&marque=Marque&couleur=Couleur&taille=Small&dateEntreStock=&dateSortieStock=
+var url_string = c;
+//alert(url_string);
+var url = new URL(url_string);
+var libelle_url = url.searchParams.get("title");
+var description_url = url.searchParams.get("duration");
+var quantite_url = url.searchParams.get("actor");
+var prixAchatUnitaire_url = url.searchParams.get("director");
+var id_url = url.searchParams.get("id");
+
+
+
+
+//console.log(libelle);
+//alert(libelle_url + description_url + quantite_url + prixAchatUnitaire_url + prixVenteUnitaire_url + marque_url + couleur_url + taille_url);
+
+
+//function load() {
+document.getElementById('titlef').value = libelle_url;
+document.getElementById('durationf').value = description_url;
+document.getElementById('actorf').value = quantite_url;
+document.getElementById('directorf').value = prixAchatUnitaire_url;
+document.getElementById('idf').value = id_url;
+}
+</script>
+
+<script src="../bower_components/angularUtils-pagination/dirPagination.js">&lt</script>
+</head>
+<body onload="hifunction();">
+<script src='../../../../ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'></script><script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../../../../www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-30027142-1', 'w3layouts.com');
+  ga('send', 'pageview');
+</script>
+<script async type='text/javascript' src='../../../../cdn.fancybar.net/ac/fancybar6a2f.js?zoneid=1502&amp;serve=C6ADVKE&amp;placement=w3layouts' id='_fancybar_js'></script>
+<style type='text/css'>  .adsense_fixed{position:fixed;bottom:-8px;width:100%;z-index:999999999999;}.adsense_content{width:720px;margin:0 auto;position:relative;background:#fff;}.adsense_btn_close,.adsense_btn_info{font-size:12px;color:#fff;height:20px;width:20px;vertical-align:middle;text-align:center;background:#000;top:4px;left:4px;position:absolute;z-index:99999999;font-family:Georgia;cursor:pointer;line-height:18px}.adsense_btn_info{left:26px;font-family:Georgia;font-style:italic}.adsense_info_content{display:none;width:260px;height:340px;position:absolute;top:-360px;background:rgba(255,255,255,.9);font-size:14px;padding:20px;font-family:Arial;border-radius:4px;-webkit-box-shadow:0 1px 26px -2px rgba(0,0,0,.3);-moz-box-shadow:0 1px 26px -2px rgba(0,0,0,.3);box-shadow:0 1px 26px -2px rgba(0,0,0,.3)}.adsense_info_content:after{content:'';position:absolute;left:25px;top:100%;width:0;height:0;border-left:10px solid transparent;border-right:10px solid transparent;border-top:10px solid #fff;clear:both}.adsense_info_content #adsense_h3{color:#000;margin:0;font-size:18px!important;font-family:'Arial'!important;margin-bottom:20px!important;}.adsense_info_content .adsense_p{color:#888;font-size:13px!important;line-height:20px;font-family:'Arial'!important;margin-bottom:20px!important;}.adsense_fh5co-team{color:#000;font-style:italic;}</style>
+<script>
+
+    $(function() {
+      $('.adsense_btn_close').click(function() {
+        $(this).closest('.adsense_fixed').css('display', 'none');
+      });
+
+      $('.adsense_btn_info').click(function() {
+        if ($('.adsense_info_content').is(':visible')) {
+          $('.adsense_info_content').css('display', 'none');
+        } else {
+          $('.adsense_info_content').css('display', 'block');
+        }
+      });
+
+    });
+
+  </script>
+
+<!-- Rami -->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script language="javascript" type="text/javascript">
+//script upload file
+$(function () { 
+    $("#fileupload").change(function () {
+        $("#dvPreview").html("");
+        var regex = /^([a-zA-Z0-9\s_\\.\-:])+(.jpg|.jpeg|.gif|.png|.bmp)$/;
+        if (regex.test($(this).val().toLowerCase())) {
+            if ($.browser.msie && parseFloat(jQuery.browser.version) <= 9.0) {
+                $("#dvPreview").show();
+                $("#dvPreview")[0].filters.item("DXImageTransform.Microsoft.AlphaImageLoader").src = $(this).val();
+            }
+            else {
+                if (typeof (FileReader) != "undefined") {
+                    $("#dvPreview").show();
+                    $("#dvPreview").append("<img />");
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        $("#dvPreview img").attr("src", e.target.result);
+                    }
+                    reader.readAsDataURL($(this)[0].files[0]);
+                } else {
+                    alert("This browser does not support FileReader.");
+                }
+            }
+        } else {
+            alert("Please upload a valid image file.");
+        }
+    });
+});
+</script>
+
+<!-- New Rami - Date Picker-->
+<!--Font Awesome (added because you use icons in your prepend/append)-->
+<link rel="stylesheet" href="https://formden.com/static/cdn/font-awesome/4.4.0/css/font-awesome.min.css" />
+
+<!-- Inline CSS based on choices in "Settings" tab -->
+<style>.bootstrap-iso .formden_header h2, .bootstrap-iso .formden_header p, .bootstrap-iso form{font-family: Arial, Helvetica, sans-serif; color: black}.bootstrap-iso form button, .bootstrap-iso form button:hover{color: #ffffff !important;} .asteriskField{color: red;}.bootstrap-iso form .input-group-addon {color:#3891cf; background-color: #eeeeee; border-radius: 4px; padding-left:12px}</style>
+
+<!-- Isolated Version of Bootstrap, not needed if your site already uses Bootstrap -->
+<link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" />
+
+<!-- Include jQuery -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+<!-- Bootstrap Date-Picker Plugin -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+
+<script>
+    $(document).ready(function(){
+        var date_input_date_entre_stock=$('input[name="dateEntreStockName"]'); //our date input has the name "date"
+        var date_input_date_sortie_stock=$('input[name="dateSortieStockName"]'); //our date input has the name "date"
+        var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
+        date_input_date_entre_stock.datepicker({
+            format: 'dd/mm/yyyy',
+            container: container,
+            todayHighlight: true,
+            autoclose: true,
+        })
+
+        date_input_date_sortie_stock.datepicker({
+            format: 'dd/mm/yyyy',
+            container: container,
+            todayHighlight: true,
+            autoclose: true,
+        })
+    })
+</script>
+<!-- End New Rami -->
+<body>
+
+
+<!--header-->
+<div class="header">
+<div class="container">
+		<div class="head">
+			<div class=" logo">
+				<a href="index-2.html"><img src="template/images/logo.png" alt=""></a>	
+			</div>
+		</div>
+	</div>
+	<div class="header-top">
+		<div class="container">
+
+				<div class="clearfix"> </div>
+		</div>
+		</div>
+		
+		<div class="container">
+		
+			<div class="head-top">
+			
+		 <div class="col-sm-8 col-md-offset-2 h_menu4">
+				<nav class="navbar nav_bottom" role="navigation">
+ 
+ <!-- Brand and toggle get grouped for better mobile display -->
+
+   <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
+       <ul class="nav navbar-nav nav_1">
+            <li><a class="color" href="/movies">Home</a></li>
+        </ul>
+     </div><!-- /.navbar-collapse -->
+
+</nav>
+			</div>
+
+			<div class="clearfix"></div>
+		</div>	
+	</div>	
+</div>
+
+<!---728x90--->
+<!--content-->
+	<div class="container">
+	<div class="page">
+	
+<!--banner-->
+<div class="banner-top">
+	<div class="container">
+		<h1>Update movie</h1>
+
+	</div>
+</div>
+	<!--table-->
+	 <div class="page-header">
+        <h3>Update product</h3>
+     </div>
+
+
+
+        <div class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="card">
+                            <div class="header">
+
+                            </div>
+
+                            <div class="content">
+                                <form action="http://127.0.0.1:3000/update_movie_done" method="post">  
+                                    <div class="row">
+									    <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label>Tile</label>
+												<input type="hidden" class="form-control" value="" name="idName" id="idf">
+                                                <input type="text" class="form-control" placeholder="movie title" name="titleName" id="titlef" required>
+                                            </div>
+                                        </div>
+										
+										<div class="col-md-3">
+                                            <div class="form-group">
+                                                <label>Duration</label>
+                                                <input type="number" min="0" class="form-control" placeholder="duration" name="durationName" id="durationf" required>
+                                            </div>
+                                        </div>
+										
+										<div class="col-md-6">
+                                            <div class="form-group">
+                                                <label>Actor</label>
+                                                <input type="text" class="form-control" placeholder="actor name" name="actorName" id="actorf" required>
+                                            </div>
+                                        </div>
+										
+										<div class="col-md-6">
+                                            <div class="form-group">
+                                                <label>Director</label>
+                                                <input type="text" class="form-control" placeholder="director name" name="directorName" id="directorf" required>
+                                            </div>
+                                        </div>
+ 
+                                    </div>
+<br>
+<!-- Rami -->
+<script>
+  $(function(){
+    $("button").click(function(){
+   $("img").toggleClass("hidden");
+   });
+ });
+</script>
+									<div class="clearfix"></div>
+<button type="submit" onclick="myFunction()" class="btn btn-sm btn-primary pull-right" style="font-size: 20px;width: 150px; height:40px;">Update</button>
+<div class="clearfix"></div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</div>
+</div>
+
+			</div>
+			
+		</div>
+	<!--//content-->
+		<!--//footer-->
+	<div class="footer">
+	<div class="footer-middle">
+				<div class="container">
+					
+					<div class="col-md-3 footer-middle-in">
+						<h6>Contact Me</h6>
+						<ul class=" in">
+							<li><a>Rami SASSI - Computer Science Engineering Student & Web developer</a></li>
+							<li><a>Phone: (+216) 24 656 210</a></li>
+							<li><a>Mail: rami.sassi@esprit.tn</a></li>
+							<li><a href="/Linkedin">Linkedin account: www.linkedin.com/in/rami-sassi-a94235132/</a></li>
+							<li><a href="/Viadeo">Viadeo account: www.viadeo.com/p/0021cipj7255tst7</a></li>
+						</ul>
+
+					
+						<div class="clearfix"></div>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+		</div>
+		<!--//footer-->
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+
+	<script src="template/js/simpleCart.min.js"> </script>
+<!-- slide -->
+<script src="template/js/bootstrap.min.js"></script>
+ 
+</body>
+
+<!-- Mirrored from p.w3layouts.com/demos/shopin/web/typo.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 27 Jul 2017 00:08:45 GMT -->
+</html>
